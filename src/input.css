@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.p {
+  @apply text-base text-secondary md:text-lg;
+}
+
+.icon {
+  @apply border border-secondary p-2 rounded-full text-secondary mr-2 hover:border-primary hover:text-primary transition duration-100;
+}
+
+.icon2 {
+  @apply border border-secondary p-2 rounded-full text-slate-300 mr-2 hover:border-primary hover:text-primary transition duration-100;
+}
+
+.navbar-fixed {
+  @apply fixed z-[9999] bg-white bg-opacity-70;
+  backdrop-filter: blur(5px);
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+.hamburger-active > span:nth-child(1) {
+  @apply rotate-45;
+}
+.hamburger-active > span:nth-child(2) {
+  @apply scale-0;
+}
+.hamburger-active > span:nth-child(3) {
+  @apply -rotate-45;
+}
+
+.hamburger-line {
+  @apply w-[30px] h-[2px] my-2 block bg-dark transition duration-300 ease-in-out;
+}
+
+.input {
+  @apply w-full px-4 py-3 text-base text-dark bg-primary bg-opacity-40 rounded-md focus:ring-1 focus:ring-primary focus:outline-none focus:border focus:border-primary shadow-lg focus:shadow-none;
+}
