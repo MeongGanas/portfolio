@@ -35,7 +35,7 @@ body {
 }
 
 .hamburger-line {
-  @apply w-[30px] h-[2px] my-2 block bg-dark transition duration-300 ease-in-out;
+  @apply w-[30px] h-[2px] my-2 block bg-hamburger transition duration-300 ease-in-out;
 }
 
 .input {

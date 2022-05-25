@@ -556,6 +556,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 1.5rem;
 }
 
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .mt-1 {
   margin-top: 0.25rem;
 }
@@ -598,6 +603,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mt-5 {
   margin-top: 1.25rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
 }
 
 .block {
@@ -676,6 +689,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-radius: 9999px;
 }
 
+.border {
+  border-width: 1px;
+}
+
 .border-t {
   border-top-width: 1px;
 }
@@ -683,6 +700,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-slate-700 {
   --tw-border-opacity: 1;
   border-color: rgb(51 65 85 / var(--tw-border-opacity));
+}
+
+.border-primary {
+  --tw-border-opacity: 1;
+  border-color: rgb(99 102 241 / var(--tw-border-opacity));
 }
 
 .bg-transparent {
@@ -696,7 +718,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .bg-primary {
   --tw-bg-opacity: 1;
-  background-color: rgb(132 204 22 / var(--tw-bg-opacity));
+  background-color: rgb(99 102 241 / var(--tw-bg-opacity));
 }
 
 .bg-dark {
@@ -751,6 +773,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .py-20 {
   padding-top: 5rem;
   padding-bottom: 5rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .pb-20 {
@@ -809,7 +836,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .text-primary {
   --tw-text-opacity: 1;
-  color: rgb(132 204 22 / var(--tw-text-opacity));
+  color: rgb(99 102 241 / var(--tw-text-opacity));
 }
 
 .text-dark {
@@ -856,16 +883,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-duration: 150ms;
 }
 
-.duration-300 {
-  transition-duration: 300ms;
+.duration-100 {
+  transition-duration: 100ms;
 }
 
 .duration-150 {
   transition-duration: 150ms;
-}
-
-.duration-100 {
-  transition-duration: 100ms;
 }
 
 body {
@@ -904,9 +927,9 @@ body {
 
 .icon:hover {
   --tw-border-opacity: 1;
-  border-color: rgb(132 204 22 / var(--tw-border-opacity));
+  border-color: rgb(99 102 241 / var(--tw-border-opacity));
   --tw-text-opacity: 1;
-  color: rgb(132 204 22 / var(--tw-text-opacity));
+  color: rgb(99 102 241 / var(--tw-text-opacity));
 }
 
 .icon2 {
@@ -927,9 +950,9 @@ body {
 
 .icon2:hover {
   --tw-border-opacity: 1;
-  border-color: rgb(132 204 22 / var(--tw-border-opacity));
+  border-color: rgb(99 102 241 / var(--tw-border-opacity));
   --tw-text-opacity: 1;
-  color: rgb(132 204 22 / var(--tw-text-opacity));
+  color: rgb(99 102 241 / var(--tw-text-opacity));
 }
 
 .navbar-fixed {
@@ -965,7 +988,7 @@ body {
   height: 2px;
   width: 30px;
   --tw-bg-opacity: 1;
-  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+  background-color: rgb(55 48 163 / var(--tw-bg-opacity));
   transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
@@ -976,7 +999,7 @@ body {
 .input {
   width: 100%;
   border-radius: 0.375rem;
-  background-color: rgb(132 204 22 / var(--tw-bg-opacity));
+  background-color: rgb(99 102 241 / var(--tw-bg-opacity));
   --tw-bg-opacity: 0.4;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -994,7 +1017,7 @@ body {
 .input:focus {
   border-width: 1px;
   --tw-border-opacity: 1;
-  border-color: rgb(132 204 22 / var(--tw-border-opacity));
+  border-color: rgb(99 102 241 / var(--tw-border-opacity));
   --tw-shadow: 0 0 #0000;
   --tw-shadow-colored: 0 0 #0000;
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -1004,7 +1027,7 @@ body {
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
   --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(132 204 22 / var(--tw-ring-opacity));
+  --tw-ring-color: rgb(99 102 241 / var(--tw-ring-opacity));
 }
 
 .invalid\:text-pink-700:invalid {
@@ -1030,9 +1053,22 @@ body {
   --tw-ring-color: rgb(190 24 93 / var(--tw-ring-opacity));
 }
 
+.group:hover .group-hover\:bg-opacity-80 {
+  --tw-bg-opacity: 0.8;
+}
+
+.group:hover .group-hover\:bg-opacity-75 {
+  --tw-bg-opacity: 0.75;
+}
+
 .group:hover .group-hover\:text-primary {
   --tw-text-opacity: 1;
-  color: rgb(132 204 22 / var(--tw-text-opacity));
+  color: rgb(99 102 241 / var(--tw-text-opacity));
+}
+
+.group:hover .group-hover\:text-dark {
+  --tw-text-opacity: 1;
+  color: rgb(15 23 42 / var(--tw-text-opacity));
 }
 
 .peer:invalid ~ .peer-invalid\:visible {
@@ -1044,8 +1080,32 @@ body {
 }
 
 @media (min-width: 768px) {
+  .md\:mx-4 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .md\:mt-0 {
+    margin-top: 0px;
+  }
+
   .md\:w-1\/3 {
     width: 33.333333%;
+  }
+
+  .md\:py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .md\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .md\:px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 
   .md\:text-lg {
