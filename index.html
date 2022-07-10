@@ -13,7 +13,7 @@
       rel="stylesheet"
     />
   </head>
-  <body class="overflow-x-hidden">
+  <body>
     <!-- Header Start -->
     <header
       class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10"
@@ -21,7 +21,9 @@
       <div class="container">
         <div class="flex items-center justify-between relative">
           <div class="px-4">
-            <a href="#home" class="font-bold text-primary block py-6 text-lg"
+            <a
+              href="#home"
+              class="font-bold text-primary block py-6 text-lg dark:text-dark"
               >Farrel Jaohari</a
             >
           </div>
@@ -45,30 +47,35 @@
                 <li class="group">
                   <a
                     href="#home"
-                    class="text-base text-dark py-2 mx-8 group-hover:text-primary flex"
+                    class="text-base text-dark py-2 mx-8 transition duration-150 group-hover:text-primary dark:hover:text-darkMode_primary flex"
                     >Beranda</a
                   >
                 </li>
                 <li class="group">
                   <a
                     href="#about"
-                    class="text-base text-dark py-2 mx-8 group-hover:text-primary flex"
+                    class="text-base text-dark py-2 mx-8 transition duration-150 group-hover:text-primary dark:hover:text-darkMode_primary flex"
                     >Tentang Saya</a
                   >
                 </li>
                 <li class="group">
                   <a
                     href="#contact"
-                    class="text-base text-dark py-2 mx-8 group-hover:text-primary flex"
+                    class="text-base text-dark py-2 mx-8 transition duration-150 group-hover:text-primary dark:hover:text-darkMode_primary flex"
                     >Contact</a
                   >
                 </li>
-                <li class="group">
-                  <a
-                    href="#"
-                    class="text-base text-white py-2 mx-8 mt-2 md:mt-0 md:py-2 md:px-5 md:mx-4 rounded-full bg-primary flex justify-center group-hover:bg-opacity-75 group-hover:text-dark transition duration-150"
-                    >Register</a
-                  >
+                <li class="flex items-center">
+                  <input type="checkbox" id="toggle" class="hidden" />
+                  <label for="toggle" class="ml-[25px] mt-2 lg:mt-0 lg:ml-4">
+                    <div
+                      class="w-9 h-5 bg-slate-500 rounded-full mx-1 flex items-center p-0.5 cursor-pointer"
+                    >
+                      <div
+                        class="w-4 h-4 bg-white rounded-full toggle-circle transition duration-200"
+                      ></div>
+                    </div>
+                  </label>
                 </li>
               </ul>
             </nav>
@@ -88,27 +95,29 @@
             <h1 class="text-base font-semibold text-dark md:text-lg">
               Halo 👋 semuanya, perkenalkan nama saya
               <span
-                class="block text-2xl mt-1 mb-2 text-primary font-bold md:text-3xl lg:text-4xl"
+                class="block text-2xl mt-1 mb-2 text-primary font-bold md:text-3xl lg:text-4xl dark:text-darkMode_primary"
                 >Farrel Giovanni Jaohari</span
               >
             </h1>
-            <h2 class="text-secondary text-base md:text-lg">
+            <h2
+              class="text-secondary text-base md:text-lg dark:text-darkMode_secondary"
+            >
               Sekolah Menengah Kejuruan
             </h2>
-            <p class="p mt-10 mb-7">
+            <p class="p mt-10 mb-7 dark:text-darkMode_secondary">
               Belajar pemrograman mudah dan menyenangkan bukan?
               <span class="text-dark">bukan.</span>
             </p>
             <a
               href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-              class="bg-primary rounded-full px-6 py-3 text-white text-base md:text-lg hover:bg-opacity-[0.85] transition duration-100"
+              class="bg-primary rounded-full px-6 py-3 text-white text-base md:text-lg hover:bg-opacity-[0.85] transition duration-100 dark:bg-darkMode_primary dark:text-dark"
               >More Info</a
             >
           </div>
           <div
             class="w-full self-end mt-6 px-5 relative lg:right-0 lg:mt-0 lg:w-1/2"
           >
-            <img src="img/profile1.jpg" alt="profile" />
+            <img src="img/profile1.png" alt="profile" />
           </div>
         </div>
       </div>
@@ -120,7 +129,9 @@
       <div class="container">
         <div class="flex flex-wrap">
           <div class="w-full px-6 self-center lg:w-1/2">
-            <h4 class="text-base font-semibold text-primary md:text-lg">
+            <h4
+              class="text-base font-semibold text-primary md:text-lg dark:text-darkMode_primary"
+            >
               TENTANG SAYA
             </h4>
             <h1
@@ -216,7 +227,9 @@
       <div class="container">
         <div class="w-full px-4 mx-auto lg:w-3/4">
           <div class="max-w-xl mx-auto mb-16 text-center">
-            <h3 class="text-lg text-primary font-bold md:text-xl lg:text-2xl">
+            <h3
+              class="text-lg text-primary font-bold md:text-xl lg:text-2xl dark:text-darkMode_primary"
+            >
               Contact
             </h3>
             <h1
@@ -265,7 +278,7 @@
               <div class="w-full mb-8 px-4">
                 <button
                   type="submit"
-                  class="bg-primary w-full py-3 rounded-full text-white font-semibold tracking-wider hover:bg-opacity-80 transition duration-100"
+                  class="bg-primary w-full py-3 rounded-full text-white font-semibold tracking-wider hover:bg-opacity-80 transition duration-100 dark:bg-darkMode_primary dark:text-dark"
                 >
                   KIRIM
                 </button>

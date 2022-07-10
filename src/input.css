@@ -4,14 +4,37 @@
 
 body {
   font-family: "Inter", sans-serif;
+  background-image: radial-gradient(
+    circle farthest-corner at 18.7% 37.8%,
+    rgba(250, 250, 250, 1) 0%,
+    rgba(225, 234, 238, 1) 90%
+  );
+  background-size: 200%;
+  animation: gradient-animation infinite 20s alternate;
+}
+
+html.dark body {
+  background: #00416a;
+  background: -webkit-linear-gradient(to right, #00416a, #d9d9da);
+  background: linear-gradient(to right, #00416a, #d9d9da);
+  background-size: 200%;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
 }
 
 .p {
-  @apply text-base text-secondary md:text-lg;
+  @apply text-base text-secondary md:text-lg dark:text-darkMode_secondary;
 }
 
 .icon {
-  @apply border border-secondary p-2 rounded-full text-secondary mr-2 hover:border-primary hover:text-primary transition duration-100;
+  @apply border border-secondary p-2 rounded-full text-secondary mr-2 hover:border-primary hover:text-primary transition duration-100 dark:border-darkMode_secondary dark:text-darkMode_secondary dark:hover:border-darkMode_primary dark:hover:text-darkMode_primary;
 }
 
 .icon2 {
@@ -39,5 +62,11 @@ body {
 }
 
 .input {
-  @apply w-full px-4 py-3 text-base text-dark bg-primary bg-opacity-40 rounded-md focus:ring-1 focus:ring-primary focus:outline-none focus:border focus:border-primary shadow-lg focus:shadow-none;
+  @apply w-full px-4 py-3 text-base text-dark bg-primary bg-opacity-40 rounded-md focus:ring-1 focus:ring-primary focus:outline-none focus:border focus:border-primary shadow-lg focus:shadow-none dark:bg-darkMode_primary;
+}
+
+@layer components {
+  #toggle:checked ~ label div.toggle-circle {
+    @apply translate-x-4;
+  }
 }
