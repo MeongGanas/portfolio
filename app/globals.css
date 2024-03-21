@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fffef2;
+}
+
 .container {
   @apply px-5 md:px-10;
+}
+
+.text-3d {
+  text-shadow: 0px 2px 0px #777, 0px 5px 10px #fffdd1, 0px 10px 2px #fffdd1,
+    0px 15px 30px #fffdd1;
 }

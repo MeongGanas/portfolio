@@ -2,11 +2,18 @@ import Link from "next/link";
 import { opensans } from "./fonts";
 import { CardReveal, RevealContainer } from "./animations";
 import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
+import { projects } from "../libs/data";
 
-function MyCard({ delay, data }: { delay: number; data?: Object }) {
+function MyCard({
+  delay,
+  project,
+}: {
+  delay: number;
+  project: { name: string; desc: string; link: string; image: string };
+}) {
   return (
     <CardReveal delay={parseFloat(`0.${delay}`)}>
-      <Card shadow="sm" isPressable>
+      <Card shadow="sm">
         <CardBody className="overflow-visible p-0">
           <Image
             shadow="sm"
@@ -14,17 +21,15 @@ function MyCard({ delay, data }: { delay: number; data?: Object }) {
             width="100%"
             alt={"present"}
             className="w-full object-cover"
-            src={"/projects/present.png"}
+            src={`/projects/${project.image}.png`}
           />
         </CardBody>
         <CardFooter className="text-small justify-between">
           <div className="p-2 text-center w-full">
-            <h1 className="text-xl font-bold">Present</h1>
-            <p className="mb-3">
-              Present adalah website untuk mengisi absensi pekerja.
-            </p>
+            <h1 className="text-xl font-bold">{project.name}</h1>
+            <p className="my-3">{project.desc}.</p>
             <Link
-              href={"https://present-client-green.vercel.app/"}
+              href={project.link}
               target="_blank"
               className="text-blue-600 underline"
             >
@@ -38,7 +43,6 @@ function MyCard({ delay, data }: { delay: number; data?: Object }) {
 }
 
 export default function Projects() {
-  const projects = ["Present", "KJPP", "Web OSIS"];
   return (
     <div className="w-full">
       <RevealContainer>
@@ -55,7 +59,7 @@ export default function Projects() {
       </RevealContainer>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
         {projects.map((project, index) => (
-          <MyCard delay={index} key={index} />
+          <MyCard delay={index} key={index} project={project} />
         ))}
       </div>
     </div>

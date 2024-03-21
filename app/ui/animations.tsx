@@ -1,6 +1,13 @@
 "use client";
-import { ReactNode } from "react";
-import { motion } from "framer-motion";
+import { ReactNode, useEffect, useState } from "react";
+import {
+  motion,
+  useScroll,
+  useSpring,
+  useTransform,
+  MotionValue,
+} from "framer-motion";
+import { useRef } from "react";
 
 export function CharReveal({
   children,
@@ -35,9 +42,19 @@ export function RevealText({ children }: { children: ReactNode }) {
 }
 
 export function Shape() {
-  const color = Math.random().toString(16).substr(-6);
-  const top = Math.random() * 75;
-  const right = Math.random() * 75;
+  const [color, setColor] = useState(
+    "#" + ((Math.random() * 0xffffff) << 0).toString(16)
+  );
+  const [top, setTop] = useState(Math.floor(Math.random() * 75));
+  const [right, setRight] = useState(Math.floor(Math.random() * 75));
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setTop(Math.floor(Math.random() * 75));
+      setRight(Math.floor(Math.random() * 75));
+    }, 2000);
+    return () => clearInterval(intervalId);
+  });
 
   return (
     <motion.div
@@ -48,10 +65,12 @@ export function Shape() {
         top: `${top}%`,
         right: `${right}%`,
         position: "absolute",
-        backgroundColor: `#${color}`,
+        backgroundColor: color,
         cursor: "grab",
         zIndex: 1,
       }}
+      animate={{ top: `${top}%`, right: `${right}%` }}
+      transition={{ duration: 1 }}
       dragConstraints={{
         top: -400,
         right: 400,

@@ -1,9 +1,10 @@
 import { Button } from "@nextui-org/react";
 import { opensans } from "./fonts";
 import { CharReveal, RevealText, Shape } from "./animations";
+import { App } from "./3D";
 
 export default function Intro() {
-  const myName = ["Farrel", "Giovanni", "Joahari"];
+  const myName = ["Farrel", "Giovanni", "Jaohari"];
   const splittedName = myName.map((name) => name.split(""));
 
   return (
@@ -17,7 +18,7 @@ export default function Intro() {
               <div key={index} className="flex">
                 {charArray.map((char, i) => (
                   <CharReveal delay={parseFloat(`0.${i}`)} key={i}>
-                    <span key={char} className="block">
+                    <span key={char} className="block uppercase text-3d">
                       {char}
                     </span>
                   </CharReveal>
@@ -35,13 +36,17 @@ export default function Intro() {
           <Button variant="solid" size="lg" className="bg-black text-white">
             Kontak Saya
           </Button>
-          <Button variant="bordered" size="lg" className="border-black">
+          <Button
+            variant="bordered"
+            size="lg"
+            className="border-black bg-white"
+          >
             Lihat Project
           </Button>
         </div>
       </div>
 
-      <div className="relative w-full md:w-1/2">
+      <div className="static md:relative w-full md:w-1/2">
         <Shape></Shape>
         <Shape></Shape>
         <Shape></Shape>

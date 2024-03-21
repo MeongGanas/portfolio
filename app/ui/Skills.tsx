@@ -4,7 +4,7 @@ import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
 
 function MyCard({ item }: { item: { title: string; img: string } }) {
   return (
-    <Card shadow="sm" isPressable>
+    <Card shadow="sm">
       <CardBody className="overflow-visible p-5">
         <div className="flex justify-center items-center h-[140px]">
           <Image
