@@ -9,7 +9,16 @@ const config: Config = {
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        title: "#e5c07b",
+        subtitle: "#d19a66",
+        text: "#d4d4d4",
+        button: "#98C379",
+        background: "#1E1E1E",
+        darker: "#292929",
+      },
+    },
     container: {
       center: true,
     },

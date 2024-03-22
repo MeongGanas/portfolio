@@ -4,9 +4,9 @@ import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
 
 function MyCard({ item }: { item: { title: string; img: string } }) {
   return (
-    <Card shadow="sm">
-      <CardBody className="overflow-visible p-5">
-        <div className="flex justify-center items-center h-[140px]">
+    <Card shadow="sm" className="bg-darker text-text">
+      <CardBody className="overflow-visible p-0">
+        <div className="flex justify-center items-center h-[140px] bg-text">
           <Image
             radius="none"
             width="140px"
@@ -57,11 +57,13 @@ export default function Skills() {
       <RevealContainer>
         <div className="w-full text-center mb-10" id="header">
           <h1
-            className={`text-5xl ${opensans.className} mb-5 font-extrabold tracking-tight`}
+            className={`text-5xl ${opensans.className} mb-5 font-extrabold tracking-tight text-title`}
           >
             Skill Saya
           </h1>
-          <p className="text-lg">Berikut adalah teknologi yang saya kuasai.</p>
+          <p className="text-lg text-text">
+            Berikut adalah teknologi yang saya kuasai.
+          </p>
         </div>
       </RevealContainer>
       <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-5">

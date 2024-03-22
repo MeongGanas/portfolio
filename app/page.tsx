@@ -5,7 +5,7 @@ import Skills from "./ui/Skills";
 export default function Home() {
   return (
     <main>
-      <section className="container min-h-screen py-20" id="home">
+      <section className="container min-h-screen py-24" id="home">
         <Intro />
       </section>
 

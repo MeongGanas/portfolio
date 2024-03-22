@@ -2,20 +2,20 @@ import { Navbar, NavbarContent, NavbarItem, Link } from "@nextui-org/react";
 
 export default function MyNavbar() {
   return (
-    <Navbar className="py-2 fixed bg-transparent">
+    <Navbar className="py-2 fixed bg-background">
       <NavbarContent className="flex gap-14 sm:gap-20" justify="end">
         <NavbarItem isActive>
-          <Link color="foreground" href="#home">
+          <Link href="#home" className="text-button">
             Home
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="#projects" color="foreground">
+          <Link href="#projects" className="text-button">
             Projects
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#skill">
+          <Link href="#skill" className="text-button">
             Skills
           </Link>
         </NavbarItem>

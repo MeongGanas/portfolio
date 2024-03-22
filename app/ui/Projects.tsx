@@ -13,7 +13,7 @@ function MyCard({
 }) {
   return (
     <CardReveal delay={parseFloat(`0.${delay}`)}>
-      <Card shadow="sm">
+      <Card shadow="sm" className="bg-darker">
         <CardBody className="overflow-visible p-0">
           <Image
             shadow="sm"
@@ -26,12 +26,14 @@ function MyCard({
         </CardBody>
         <CardFooter className="text-small justify-between">
           <div className="p-2 text-center w-full">
-            <h1 className="text-xl font-bold">{project.name}</h1>
-            <p className="my-3">{project.desc}.</p>
+            <h1 className="text-xl font-extrabold text-title">
+              {project.name}
+            </h1>
+            <p className="my-3 text-text">{project.desc}.</p>
             <Link
               href={project.link}
               target="_blank"
-              className="text-blue-600 underline"
+              className="text-blue-500 underline"
             >
               Lihat Detail
             </Link>
@@ -48,11 +50,11 @@ export default function Projects() {
       <RevealContainer>
         <div className="w-full text-center mb-10" id="header">
           <h1
-            className={`text-5xl ${opensans.className} mb-5 font-extrabold tracking-tight`}
+            className={`text-5xl ${opensans.className} mb-5 font-extrabold tracking-tight text-title`}
           >
             Project Saya
           </h1>
-          <p className="text-lg">
+          <p className="text-lg text-text">
             Berikut adalah website-website yang telah saya kerjakan.
           </p>
         </div>
