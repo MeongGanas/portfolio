@@ -12,7 +12,9 @@ const config: Config = {
     extend: {
       colors: {
         title: "#e5c07b",
-        subtitle: "#d19a66",
+        varType: "#4D5BCE",
+        varName: "#43D9AD",
+        varValue: "#E99287",
         text: "#d4d4d4",
         button: "#98C379",
         background: "#1E1E1E",

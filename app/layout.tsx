@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { poppins } from "./ui/fonts";
+import { firacode } from "./ui/fonts";
 import Providers from "./Providers";
 import MyNavbar from "./ui/Navbar";
 
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.className} bg-background text-text`}>
+      <body className={`${firacode.className} bg-background text-text`}>
         <MyNavbar />
         <Providers>{children}</Providers>
       </body>

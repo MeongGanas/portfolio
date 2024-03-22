@@ -1,4 +1,3 @@
-import { Poppins, Open_Sans } from "next/font/google";
+import { Fira_Code } from "next/font/google";
 
-export const opensans = Open_Sans({ weight: "700", subsets: ["latin"] });
-export const poppins = Poppins({ weight: "400", subsets: ["latin"] });
+export const firacode = Fira_Code({ weight: "400", subsets: ["latin"] });

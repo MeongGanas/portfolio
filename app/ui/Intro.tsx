@@ -1,6 +1,5 @@
 "use client";
 import { Button } from "@nextui-org/react";
-import { opensans } from "./fonts";
 import { CharReveal, RevealText } from "./animations";
 import Link from "next/link";
 import Image from "next/image";
@@ -12,41 +11,43 @@ export default function Intro() {
   return (
     <section className="container min-h-screen py-24" id="home">
       <main className="flex items-center flex-wrap">
-        <div id="content" className="w-full mb-10 lg:mb-0 lg:w-1/2">
-          <div id="title" className="mb-10">
-            <h1
-              className={`${opensans.className} font-extrabold text-6xl sm:text-7xl tracking-tight mb-8`}
-            >
-              {splittedName.map((charArray, index) => (
-                <div key={index} className="flex text-title">
-                  {charArray.map((char, i) => (
-                    <CharReveal delay={parseFloat(`0.${i}`)} key={i}>
-                      <span key={char} className="block uppercase">
-                        {char}
-                      </span>
-                    </CharReveal>
-                  ))}
-                </div>
-              ))}
+        <div id="title" className="w-full mb-10 lg:mb-0 lg:w-1/2">
+          <RevealText>
+            <h1 className="block pl-2 mb-2 text-lg tracking-widest">
+              // Hello all, I am
             </h1>
-            <RevealText>
-              <p className="text-xl md:text-2xl max-w-sm tracking-widest uppercase">
-                Frontend | Backend Web Developer
-              </p>
-            </RevealText>
-          </div>
-          <div className="flex gap-5">
-            <Button variant="solid" size="lg" className="bg-button text-black">
-              Kontak Saya
-            </Button>
-            <Button
-              variant="bordered"
-              size="lg"
-              className="border-button text-text"
-            >
-              <Link href={"#projects"}>Lihat Project</Link>
-            </Button>
-          </div>
+          </RevealText>
+          <h1 className="font-extrabold text-6xl tracking-tight mb-8">
+            {splittedName.map((charArray, index) => (
+              <div key={index} className="flex text-title">
+                {charArray.map((char, i) => (
+                  <CharReveal delay={parseFloat(`0.${i}`)} key={i}>
+                    <span key={char} className="block uppercase">
+                      {char}
+                    </span>
+                  </CharReveal>
+                ))}
+              </div>
+            ))}
+          </h1>
+          <RevealText>
+            <p className="text-xl mb-10">
+              // Front-end | Back-end Web Developer
+            </p>
+          </RevealText>
+          <RevealText>
+            <h1>
+              <span className="text-varType">const </span>
+              <span className="text-varName">githubLink </span>
+              <span> = </span>
+              <Link
+                href={"https://github.com/MeongGanas"}
+                className="text-varValue"
+              >
+                &quot;https://github.com/MeongGanas&quot;
+              </Link>
+            </h1>
+          </RevealText>
         </div>
         <div className="w-full lg:w-1/2">
           <div className="hidden md:block w-full relative" id="desktop">

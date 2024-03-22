@@ -45,3 +45,5 @@ export const skill = [
     img: "/skill/nextjs.png",
   },
 ];
+
+export const sertifikat = ["dasar", "frontend", "logika", "software"];

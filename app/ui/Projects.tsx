@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { opensans } from "./fonts";
 import { CardReveal, RevealContainer } from "./animations";
 import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
 import { projects } from "../libs/data";
@@ -51,12 +50,12 @@ export default function Projects() {
         <RevealContainer>
           <div className="w-full text-center mb-10" id="header">
             <h1
-              className={`text-3xl sm:text-5xl ${opensans.className} mb-5 font-extrabold tracking-tight text-title`}
+              className={`text-3xl sm:text-5xl mb-5 font-extrabold tracking-tight text-title`}
             >
-              Project Saya
+              <span className="text-varType">let</span> Project Saya;
             </h1>
             <p className="text-base sm:text-lg text-text">
-              Berikut adalah website-website yang telah saya kerjakan.
+              // Berikut adalah website-website yang telah saya kerjakan.
             </p>
           </div>
         </RevealContainer>

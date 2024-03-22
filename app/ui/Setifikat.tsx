@@ -1,8 +1,6 @@
-import Link from "next/link";
-import { opensans } from "./fonts";
 import { CardReveal, RevealContainer } from "./animations";
 import { Card, CardBody, Image } from "@nextui-org/react";
-import { projects } from "../libs/data";
+import { projects, sertifikat } from "../libs/data";
 
 function MyCard({ delay, image }: { delay: number; image: string }) {
   return (
@@ -24,20 +22,19 @@ function MyCard({ delay, image }: { delay: number; image: string }) {
 }
 
 export default function Sertifikat() {
-  const sertifikat = ["dasar", "frontend", "logika", "software"];
   return (
     <section className="container min-h-screen py-20" id="sertifikat">
       <div className="w-full">
         <RevealContainer>
           <div className="w-full text-center mb-10" id="header">
             <h1
-              className={`text-3xl sm:text-5xl ${opensans.className} mb-5 font-extrabold tracking-tight text-title`}
+              className={`text-3xl sm:text-5xl mb-5 font-extrabold tracking-tight text-title`}
             >
-              Setifikat Saya
+              <span className="text-varType">let</span> Setifikat Saya;
             </h1>
             <p className="text-base sm:text-lg text-text">
-              Sertifikat-sertifikat telah saya dapatkan dari mengikuti berbagai
-              kegiatan.
+              // Sertifikat-sertifikat telah saya dapatkan dari mengikuti
+              berbagai kegiatan.
             </p>
           </div>
         </RevealContainer>

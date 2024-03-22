@@ -1,4 +1,3 @@
-import { opensans } from "./fonts";
 import { RevealContainer } from "./animations";
 import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
 import { skill } from "../libs/data";
@@ -33,12 +32,12 @@ export default function Skills() {
         <RevealContainer>
           <div className="w-full text-center mb-10" id="header">
             <h1
-              className={`text-3xl sm:text-5xl ${opensans.className} mb-5 font-extrabold tracking-tight text-title`}
+              className={`text-3xl sm:text-5xl mb-5 font-extrabold tracking-tight text-title`}
             >
-              Skill Saya
+              <span className="text-varType">let</span> Skill_Saya;
             </h1>
             <p className="text-base sm:text-lg text-text">
-              Berikut adalah teknologi yang saya kuasai.
+              // Berikut adalah teknologi yang saya kuasai.
             </p>
           </div>
         </RevealContainer>
