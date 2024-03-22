@@ -37,7 +37,7 @@ export default function Skills() {
               <span className="text-varType">let</span> Skill_Saya;
             </h1>
             <p className="text-base sm:text-lg text-text">
-              // Berikut adalah teknologi yang saya kuasai.
+              &#47;&#47; Berikut adalah teknologi yang saya kuasai.
             </p>
           </div>
         </RevealContainer>

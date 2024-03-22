@@ -33,8 +33,8 @@ export default function Sertifikat() {
               <span className="text-varType">let</span> Setifikat Saya;
             </h1>
             <p className="text-base sm:text-lg text-text">
-              // Sertifikat-sertifikat telah saya dapatkan dari mengikuti
-              berbagai kegiatan.
+              &#47;&#47; Sertifikat-sertifikat telah saya dapatkan dari
+              mengikuti berbagai kegiatan.
             </p>
           </div>
         </RevealContainer>

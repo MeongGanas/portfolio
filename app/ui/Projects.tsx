@@ -55,7 +55,8 @@ export default function Projects() {
               <span className="text-varType">let</span> Project Saya;
             </h1>
             <p className="text-base sm:text-lg text-text">
-              // Berikut adalah website-website yang telah saya kerjakan.
+              &#47;&#47; Berikut adalah website-website yang telah saya
+              kerjakan.
             </p>
           </div>
         </RevealContainer>

@@ -32,7 +32,7 @@ export default function Intro() {
           </h1>
           <RevealText>
             <p className="text-xl mb-10">
-              // Front-end | Back-end Web Developer
+              &#47;&#47; Front-end | Back-end Web Developer
             </p>
           </RevealText>
           <RevealText>
