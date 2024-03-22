@@ -12,7 +12,7 @@ function MyCard({
 }) {
   return (
     <CardReveal delay={parseFloat(`0.${delay}`)}>
-      <Card shadow="sm" className="bg-darker">
+      <Card shadow="sm" className="card">
         <CardBody className="overflow-visible p-0">
           <Image
             shadow="sm"

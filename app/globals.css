@@ -33,3 +33,7 @@ section {
   z-index: 9999;
   @apply bg-button;
 }
+
+.card {
+  @apply bg-darker hover:-translate-y-2 transition-all duration-150;
+}

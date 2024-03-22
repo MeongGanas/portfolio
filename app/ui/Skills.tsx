@@ -9,7 +9,7 @@ function MyCard({
   data: { title: string; img: string; link: string };
 }) {
   return (
-    <Card shadow="sm" className="bg-darker text-text" isPressable>
+    <Card shadow="sm" className="card text-text" isPressable>
       <Link href={data.link} target="_blank" className="w-full">
         <CardBody className="overflow-visible p-0">
           <div className="flex justify-center items-center text-center h-[140px] bg-text">

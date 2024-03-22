@@ -15,7 +15,7 @@ function MyCard({
   const router = useRouter();
   return (
     <CardReveal delay={parseFloat(`0.${delay}`)}>
-      <Card shadow="sm" className="bg-darker" isPressable>
+      <Card shadow="sm" className="card" isPressable>
         <Link href={data.link} target="_blank">
           <CardBody className="overflow-visible p-0">
             <Image
