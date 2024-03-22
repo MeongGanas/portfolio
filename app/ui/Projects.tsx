@@ -52,7 +52,7 @@ export default function Projects() {
             <h1
               className={`text-3xl sm:text-5xl mb-5 font-extrabold tracking-tight text-title`}
             >
-              <span className="text-varType">let</span> Project Saya;
+              <span className="text-varType">let</span> Project_Saya;
             </h1>
             <p className="text-base sm:text-lg text-text">
               &#47;&#47; Berikut adalah website-website yang telah saya

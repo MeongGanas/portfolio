@@ -1,21 +1,33 @@
+"use client";
 import { CardReveal, RevealContainer } from "./animations";
 import { Card, CardBody, Image } from "@nextui-org/react";
-import { projects, sertifikat } from "../libs/data";
+import { sertifikat } from "../libs/data";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
-function MyCard({ delay, image }: { delay: number; image: string }) {
+function MyCard({
+  delay,
+  data,
+}: {
+  delay: number;
+  data: { image: string; link: string };
+}) {
+  const router = useRouter();
   return (
     <CardReveal delay={parseFloat(`0.${delay}`)}>
-      <Card shadow="sm" className="bg-darker">
-        <CardBody className="overflow-visible p-0">
-          <Image
-            shadow="sm"
-            radius="none"
-            width="100%"
-            alt={"present"}
-            className="w-full object-cover"
-            src={`/sertifikat/${image}.png`}
-          />
-        </CardBody>
+      <Card shadow="sm" className="bg-darker" isPressable>
+        <Link href={data.link} target="_blank">
+          <CardBody className="overflow-visible p-0">
+            <Image
+              shadow="sm"
+              radius="none"
+              width="100%"
+              alt={"present"}
+              className="w-full object-cover"
+              src={`/sertifikat/${data.image}.png`}
+            />
+          </CardBody>
+        </Link>
       </Card>
     </CardReveal>
   );
@@ -30,7 +42,7 @@ export default function Sertifikat() {
             <h1
               className={`text-3xl sm:text-5xl mb-5 font-extrabold tracking-tight text-title`}
             >
-              <span className="text-varType">let</span> Setifikat Saya;
+              <span className="text-varType">let</span> Setifikat_Saya;
             </h1>
             <p className="text-base sm:text-lg text-text">
               &#47;&#47; Sertifikat-sertifikat telah saya dapatkan dari
@@ -39,8 +51,8 @@ export default function Sertifikat() {
           </div>
         </RevealContainer>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-          {sertifikat.map((image, index) => (
-            <MyCard delay={index} key={index} image={image} />
+          {sertifikat.map((data, index) => (
+            <MyCard delay={index} key={index} data={data} />
           ))}
         </div>
       </div>

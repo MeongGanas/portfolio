@@ -1,26 +1,33 @@
 import { RevealContainer } from "./animations";
 import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
 import { skill } from "../libs/data";
+import Link from "next/link";
 
-function MyCard({ item }: { item: { title: string; img: string } }) {
+function MyCard({
+  data,
+}: {
+  data: { title: string; img: string; link: string };
+}) {
   return (
-    <Card shadow="sm" className="bg-darker text-text">
-      <CardBody className="overflow-visible p-0">
-        <div className="flex justify-center items-center h-[140px] bg-text">
-          <Image
-            radius="none"
-            width="140px"
-            alt={item.title}
-            className="object-cover"
-            src={item.img}
-          />
-        </div>
-      </CardBody>
-      <CardFooter className="text-small justify-between">
-        <div className="w-full text-center">
-          <h1 className="font-bold">{item.title}</h1>
-        </div>
-      </CardFooter>
+    <Card shadow="sm" className="bg-darker text-text" isPressable>
+      <Link href={data.link} target="_blank" className="w-full">
+        <CardBody className="overflow-visible p-0">
+          <div className="flex justify-center items-center text-center h-[140px] bg-text">
+            <Image
+              radius="none"
+              width="140px"
+              alt={data.title}
+              className="object-cover"
+              src={data.img}
+            />
+          </div>
+        </CardBody>
+        <CardFooter className="text-small justify-between">
+          <div className="w-full text-center">
+            <h1 className="font-bold">{data.title}</h1>
+          </div>
+        </CardFooter>
+      </Link>
     </Card>
   );
 }
@@ -42,8 +49,8 @@ export default function Skills() {
           </div>
         </RevealContainer>
         <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-5">
-          {skill.map((s, index) => (
-            <MyCard item={s} key={index} />
+          {skill.map((data, index) => (
+            <MyCard data={data} key={index} />
           ))}
         </div>
       </div>
