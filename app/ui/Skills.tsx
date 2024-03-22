@@ -57,11 +57,11 @@ export default function Skills() {
       <RevealContainer>
         <div className="w-full text-center mb-10" id="header">
           <h1
-            className={`text-5xl ${opensans.className} mb-5 font-extrabold tracking-tight text-title`}
+            className={`text-3xl sm:text-5xl ${opensans.className} mb-5 font-extrabold tracking-tight text-title`}
           >
             Skill Saya
           </h1>
-          <p className="text-lg text-text">
+          <p className="text-base sm:text-lg text-text">
             Berikut adalah teknologi yang saya kuasai.
           </p>
         </div>

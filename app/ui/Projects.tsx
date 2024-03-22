@@ -50,16 +50,16 @@ export default function Projects() {
       <RevealContainer>
         <div className="w-full text-center mb-10" id="header">
           <h1
-            className={`text-5xl ${opensans.className} mb-5 font-extrabold tracking-tight text-title`}
+            className={`text-3xl sm:text-5xl ${opensans.className} mb-5 font-extrabold tracking-tight text-title`}
           >
             Project Saya
           </h1>
-          <p className="text-lg text-text">
+          <p className="text-base sm:text-lg text-text">
             Berikut adalah website-website yang telah saya kerjakan.
           </p>
         </div>
       </RevealContainer>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {projects.map((project, index) => (
           <MyCard delay={index} key={index} project={project} />
         ))}
