@@ -1,13 +1,6 @@
 "use client";
 import { ReactNode, useEffect, useState } from "react";
-import {
-  motion,
-  useScroll,
-  useSpring,
-  useTransform,
-  MotionValue,
-} from "framer-motion";
-import { useRef } from "react";
+import { motion, useScroll } from "framer-motion";
 
 export function CharReveal({
   children,
@@ -114,5 +107,17 @@ export function CardReveal({
     >
       {children}
     </motion.div>
+  );
+}
+
+export function ScrollLinked() {
+  const { scrollYProgress } = useScroll();
+  return (
+    <>
+      <motion.div
+        className="progress-bar"
+        style={{ scaleX: scrollYProgress }}
+      />
+    </>
   );
 }

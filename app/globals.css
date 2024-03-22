@@ -10,10 +10,26 @@ html {
   @apply px-5 md:px-10;
 }
 
-.test {
-  color: #e5c07b;
-  color: #9d87b9;
-  color: #d19a66;
-  color: #c678dd;
-  color: #d4d4d4;
+.scroll-effect {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+section {
+  scroll-snap-align: start;
+}
+
+.progress-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  transform-origin: 0%;
+  z-index: 9999;
+  @apply bg-button;
 }

@@ -1,21 +1,21 @@
 import Intro from "./ui/Intro";
 import Projects from "./ui/Projects";
+import Sertifikat from "./ui/Setifikat";
 import Skills from "./ui/Skills";
+import { ScrollLinked } from "./ui/animations";
 
 export default function Home() {
   return (
     <main>
-      <section className="container min-h-screen py-24" id="home">
-        <Intro />
-      </section>
+      <ScrollLinked />
 
-      <section className="container min-h-screen py-20" id="projects">
-        <Projects />
-      </section>
+      <Intro />
 
-      <section className="container min-h-screen py-20" id="skill">
-        <Skills />
-      </section>
+      <Projects />
+
+      <Skills />
+
+      <Sertifikat />
     </main>
   );
 }

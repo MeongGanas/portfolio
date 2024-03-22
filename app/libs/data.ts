@@ -18,3 +18,30 @@ export const projects = [
     link: "https://osis-smktelkom-makassar.vercel.app/",
   },
 ];
+
+export const skill = [
+  {
+    title: "TailwindCSS",
+    img: "/skill/tailwind.png",
+  },
+  {
+    title: "React",
+    img: "/skill/react.png",
+  },
+  {
+    title: "Nodejs",
+    img: "/skill/nodejs.png",
+  },
+  {
+    title: "Mongodb",
+    img: "/skill/mongodb.png",
+  },
+  {
+    title: "Express JS",
+    img: "/skill/expressjs.png",
+  },
+  {
+    title: "Nextjs",
+    img: "/skill/nextjs.png",
+  },
+];
