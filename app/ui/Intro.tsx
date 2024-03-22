@@ -14,7 +14,7 @@ export default function Intro() {
         <div id="title" className="w-full mb-10 lg:mb-0 lg:w-1/2">
           <RevealText>
             <h1 className="block pl-2 mb-2 text-lg tracking-widest">
-              // Hello all, I am
+              &#47;&#47; Hello all, I am
             </h1>
           </RevealText>
           <h1 className="font-extrabold text-6xl tracking-tight mb-8">
