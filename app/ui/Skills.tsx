@@ -1,40 +1,15 @@
+"use client";
 import { RevealContainer } from "./animations";
-import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
 import { skill } from "../libs/data";
-import Link from "next/link";
+import { SkillCard } from "./Cards";
 
-function MyCard({
-  data,
-}: {
-  data: { title: string; img: string; link: string };
-}) {
+export default function Skills({ refCallback }: { refCallback: any }) {
   return (
-    <Card shadow="sm" className="card text-text" isPressable>
-      <Link href={data.link} target="_blank" className="w-full">
-        <CardBody className="overflow-visible p-0">
-          <div className="flex justify-center items-center text-center h-[140px] bg-text">
-            <Image
-              radius="none"
-              width="140px"
-              alt={data.title}
-              className="object-cover"
-              src={data.img}
-            />
-          </div>
-        </CardBody>
-        <CardFooter className="text-small justify-between">
-          <div className="w-full text-center">
-            <h1 className="font-bold">{data.title}</h1>
-          </div>
-        </CardFooter>
-      </Link>
-    </Card>
-  );
-}
-
-export default function Skills() {
-  return (
-    <section className="container min-h-screen py-20" id="skill">
+    <section
+      className="container min-h-screen py-28"
+      id="skills"
+      ref={refCallback}
+    >
       <div className="w-full">
         <RevealContainer>
           <div className="w-full text-center mb-10" id="header">
@@ -50,7 +25,7 @@ export default function Skills() {
         </RevealContainer>
         <div className="grid grid-cols-2 md:grid-cols-4 xl:grid-cols-6 gap-5">
           {skill.map((data, index) => (
-            <MyCard data={data} key={index} />
+            <SkillCard data={data} key={index} />
           ))}
         </div>
       </div>

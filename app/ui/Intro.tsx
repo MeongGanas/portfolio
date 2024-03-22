@@ -1,15 +1,18 @@
 "use client";
-import { Button } from "@nextui-org/react";
 import { CharReveal, RevealText } from "./animations";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Intro() {
+export default function Intro({ refCallback }: { refCallback: any }) {
   const myName = ["Farrel", "Giovanni", "Jaohari"];
   const splittedName = myName.map((name) => name.split(""));
 
   return (
-    <section className="container min-h-screen py-24" id="home">
+    <section
+      className="container min-h-screen py-28"
+      id="home"
+      ref={refCallback}
+    >
       <main className="flex items-center flex-wrap">
         <div id="title" className="w-full mb-10 lg:mb-0 lg:w-1/2">
           <RevealText>

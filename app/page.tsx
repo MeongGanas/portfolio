@@ -1,21 +1,32 @@
+"use client";
+import { useRef } from "react";
 import Intro from "./ui/Intro";
+import MyNavbar from "./ui/Navbar";
 import Projects from "./ui/Projects";
 import Sertifikat from "./ui/Setifikat";
 import Skills from "./ui/Skills";
-import { ScrollLinked } from "./ui/animations";
 
 export default function Home() {
+  const sectionsRef = useRef([]);
+  const refCallback = (element: never) => {
+    if (element) {
+      sectionsRef.current.push(element);
+    }
+  };
+
   return (
-    <main>
-      <ScrollLinked />
+    <>
+      <MyNavbar sectionsRef={sectionsRef} />
 
-      <Intro />
+      <main className="scroll-effect">
+        <Intro refCallback={refCallback} />
 
-      <Projects />
+        <Projects refCallback={refCallback} />
 
-      <Skills />
+        <Skills refCallback={refCallback} />
 
-      <Sertifikat />
-    </main>
+        <Sertifikat refCallback={refCallback} />
+      </main>
+    </>
   );
 }

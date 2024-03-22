@@ -1,41 +1,15 @@
 "use client";
-import { CardReveal, RevealContainer } from "./animations";
-import { Card, CardBody, Image } from "@nextui-org/react";
+import { RevealContainer } from "./animations";
 import { sertifikat } from "../libs/data";
-import { useRouter } from "next/navigation";
-import Link from "next/link";
+import { SertifikatCard } from "./Cards";
 
-function MyCard({
-  delay,
-  data,
-}: {
-  delay: number;
-  data: { image: string; link: string };
-}) {
-  const router = useRouter();
+export default function Sertifikat({ refCallback }: { refCallback: any }) {
   return (
-    <CardReveal delay={parseFloat(`0.${delay}`)}>
-      <Card shadow="sm" className="card" isPressable>
-        <Link href={data.link} target="_blank">
-          <CardBody className="overflow-visible p-0">
-            <Image
-              shadow="sm"
-              radius="none"
-              width="100%"
-              alt={"present"}
-              className="w-full object-cover"
-              src={`/sertifikat/${data.image}.png`}
-            />
-          </CardBody>
-        </Link>
-      </Card>
-    </CardReveal>
-  );
-}
-
-export default function Sertifikat() {
-  return (
-    <section className="container min-h-screen py-20" id="sertifikat">
+    <section
+      className="container min-h-screen py-28"
+      id="sertifikat"
+      ref={refCallback}
+    >
       <div className="w-full">
         <RevealContainer>
           <div className="w-full text-center mb-10" id="header">
@@ -52,7 +26,7 @@ export default function Sertifikat() {
         </RevealContainer>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           {sertifikat.map((data, index) => (
-            <MyCard delay={index} key={index} data={data} />
+            <SertifikatCard delay={index} key={index} data={data} />
           ))}
         </div>
       </div>
