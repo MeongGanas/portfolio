@@ -22,8 +22,8 @@ export function ProjectCard({
             src={`/projects/${project.image}.png`}
           />
         </CardBody>
-        <CardFooter className="text-small justify-between">
-          <div className="p-2 text-center w-full">
+        <CardFooter className="justify-between text-small">
+          <div className="w-full p-2 text-center">
             <h1 className="text-xl font-extrabold text-title">
               {project.name}
             </h1>
@@ -51,7 +51,7 @@ export function SkillCard({
     <Card shadow="sm" className="card text-text" isPressable>
       <Link href={data.link} target="_blank" className="w-full">
         <CardBody className="overflow-visible p-0">
-          <div className="flex justify-center items-center text-center h-[140px] bg-text">
+          <div className="flex h-[140px] items-center justify-center bg-text text-center">
             <Image
               radius="none"
               width="140px"
@@ -61,7 +61,7 @@ export function SkillCard({
             />
           </div>
         </CardBody>
-        <CardFooter className="text-small justify-between">
+        <CardFooter className="justify-between text-small">
           <div className="w-full text-center">
             <h1 className="font-bold">{data.title}</h1>
           </div>

@@ -36,7 +36,7 @@ export function RevealText({ children }: { children: ReactNode }) {
 
 export function Shape() {
   const [color, setColor] = useState(
-    "#" + ((Math.random() * 0xffffff) << 0).toString(16)
+    "#" + ((Math.random() * 0xffffff) << 0).toString(16),
   );
   const [top, setTop] = useState(Math.floor(Math.random() * 75));
   const [right, setRight] = useState(Math.floor(Math.random() * 75));

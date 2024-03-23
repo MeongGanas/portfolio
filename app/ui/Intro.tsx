@@ -3,24 +3,20 @@ import { CharReveal, RevealText } from "./animations";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Intro({ refCallback }: { refCallback: any }) {
+export default function Intro() {
   const myName = ["Farrel", "Giovanni", "Jaohari"];
   const splittedName = myName.map((name) => name.split(""));
 
   return (
-    <section
-      className="container min-h-screen py-28"
-      id="home"
-      ref={refCallback}
-    >
-      <main className="flex items-center flex-wrap">
-        <div id="title" className="w-full mb-10 lg:mb-0 lg:w-1/2">
+    <section className="container min-h-screen py-20" id="home">
+      <main className="flex flex-wrap items-center">
+        <div id="title" className="mb-10 w-full lg:mb-0 lg:w-1/2">
           <RevealText>
-            <h1 className="block mb-2 text-lg tracking-widest">
-              &#47;&#47; Hello all, I am
+            <h1 className="mb-2 block text-lg tracking-widest">
+              &#47;&#47; Halo semua 👋, Saya
             </h1>
           </RevealText>
-          <h1 className="font-extrabold text-6xl tracking-tight mb-8">
+          <h1 className="mb-8 text-6xl font-extrabold tracking-tight">
             {splittedName.map((charArray, index) => (
               <div key={index} className="flex text-title">
                 {charArray.map((char, i) => (
@@ -34,7 +30,7 @@ export default function Intro({ refCallback }: { refCallback: any }) {
             ))}
           </h1>
           <RevealText>
-            <p className="text-xl mb-10">
+            <p className="mb-10 text-xl">
               &#47;&#47; Front-end | Back-end Web Developer
             </p>
           </RevealText>
@@ -53,20 +49,20 @@ export default function Intro({ refCallback }: { refCallback: any }) {
           </RevealText>
         </div>
         <div className="w-full lg:w-1/2">
-          <div className="hidden md:block w-full relative" id="desktop">
+          <div className="relative hidden w-full md:block" id="desktop">
             <Image
               src={"/projects/kjpp.png"}
               width={450}
               height={300}
               alt="side-image"
-              className="rounded-md shadow-md shadow-slate-700 mb-10"
+              className="mb-10 rounded-md shadow-md shadow-slate-700"
             />
             <Image
               src={"/projects/osis.png"}
               width={450}
               height={300}
               alt="side-image"
-              className="rounded-md shadow-md shadow-slate-700 absolute right-0 -translate-y-1/2"
+              className="absolute right-0 -translate-y-1/2 rounded-md shadow-md shadow-slate-700"
             />
             <Image
               src={"/projects/present.png"}
@@ -77,20 +73,20 @@ export default function Intro({ refCallback }: { refCallback: any }) {
             />
           </div>
 
-          <div className="block md:hidden w-full relative" id="mobile">
+          <div className="relative block w-full md:hidden" id="mobile">
             <Image
               src={"/projects/kjpp.png"}
               width={250}
               height={100}
               alt="side-image"
-              className="rounded-md shadow-md shadow-slate-700 mb-10"
+              className="mb-10 rounded-md shadow-md shadow-slate-700"
             />
             <Image
               src={"/projects/osis.png"}
               width={250}
               height={100}
               alt="side-image"
-              className="rounded-md shadow-md shadow-slate-700 absolute right-0 -translate-y-1/2"
+              className="absolute right-0 -translate-y-1/2 rounded-md shadow-md shadow-slate-700"
             />
             <Image
               src={"/projects/present.png"}
