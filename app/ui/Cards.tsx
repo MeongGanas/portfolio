@@ -80,7 +80,7 @@ export function SertifikatCard({
 }) {
   return (
     <CardReveal delay={parseFloat(`0.${delay}`)}>
-      <Card shadow="sm" className="card" isPressable>
+      <Card shadow="sm" className="card min-w-96" isPressable>
         <Link href={data.link} target="_blank">
           <CardBody className="overflow-visible p-0">
             <Image
