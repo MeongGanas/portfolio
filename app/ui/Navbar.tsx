@@ -3,8 +3,8 @@ import { Navbar, NavbarContent, NavbarItem, Link } from "@nextui-org/react";
 
 export default function MyNavbar() {
   return (
-    <Navbar className="fixed bg-background py-2">
-      <NavbarContent className="flex w-full gap-10 sm:gap-20" justify="center">
+    <Navbar className="bg-background py-2">
+      <NavbarContent className="flex w-full gap-5 sm:gap-20" justify="center">
         <NavbarItem>
           <Link
             href="#home"
