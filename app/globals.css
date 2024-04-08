@@ -35,5 +35,5 @@ section {
 }
 
 .card {
-  @apply bg-darker transition-all duration-150 hover:-translate-y-2;
+  @apply bg-darker;
 }

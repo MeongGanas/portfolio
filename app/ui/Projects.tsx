@@ -8,7 +8,7 @@ export default function Projects() {
     <section className="container min-h-screen py-20" id="projects">
       <div className="w-full">
         <RevealContainer>
-          <div className="mb-10 w-full text-center" id="header">
+          <div className="mb-14 w-full text-center" id="header">
             <h1
               className={`mb-5 text-3xl font-extrabold tracking-tight text-title sm:text-5xl`}
             >
@@ -20,9 +20,9 @@ export default function Projects() {
             </p>
           </div>
         </RevealContainer>
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="project-wrapper">
           {projects.map((project, index) => (
-            <ProjectCard delay={index} key={index} project={project} />
+            <ProjectCard i={index} key={index} project={project} />
           ))}
         </div>
       </div>

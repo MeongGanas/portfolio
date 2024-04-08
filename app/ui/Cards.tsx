@@ -1,26 +1,44 @@
 import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
 import { CardReveal } from "./animations";
 import Link from "next/link";
+import { useScroll, useTransform, motion } from "framer-motion";
+import { useRef } from "react";
 
 export function ProjectCard({
-  delay,
+  i,
   project,
 }: {
-  delay: number;
+  i: number;
   project: { name: string; desc: string; link: string; image: string };
 }) {
+  const container = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: container,
+
+    offset: ["start end", "start start"],
+  });
+
+  const imageScale = useTransform(scrollYProgress, [0, 1], [1.2, 1]);
+
   return (
-    <CardReveal delay={parseFloat(`0.${delay}`)}>
-      <Card shadow="sm" className="card">
-        <CardBody className="overflow-visible p-0">
-          <Image
-            shadow="sm"
-            radius="none"
-            width="100%"
-            alt={"present"}
-            className="w-full object-cover"
-            src={`/projects/${project.image}.png`}
-          />
+    <div ref={container} className="sticky top-0 flex h-fit items-center">
+      <Card
+        shadow="sm"
+        className="card mx-auto max-w-screen-sm origin-top"
+        style={{ top: `calc(-5vh + ${i * 25}px)` }}
+      >
+        <CardBody className="overflow-hidden p-0">
+          <motion.div style={{ scale: imageScale }}>
+            <Image
+              shadow="sm"
+              radius="none"
+              width="100%"
+              alt={"present"}
+              className="w-full object-cover"
+              src={`/projects/${project.image}.png`}
+            />
+          </motion.div>
         </CardBody>
         <CardFooter className="justify-between text-small">
           <div className="w-full p-2 text-center">
@@ -38,7 +56,7 @@ export function ProjectCard({
           </div>
         </CardFooter>
       </Card>
-    </CardReveal>
+    </div>
   );
 }
 

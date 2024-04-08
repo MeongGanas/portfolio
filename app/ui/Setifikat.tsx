@@ -10,7 +10,7 @@ export default function Sertifikat() {
   const { scrollYProgress } = useScroll({
     target,
   });
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-80%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-80%"]);
 
   return (
     <section className="container" id="sertifikat">
